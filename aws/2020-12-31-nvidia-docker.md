@@ -2,7 +2,7 @@
 layout: post
 title: Setting nvidia as default runtime 
 subtitle : Commands I use (almost) everyday
-tags: [AWS, TIL]
+tags: [AWS, EC2, TIL]
 author: Jaewon Chung
 comments : True
 ---
