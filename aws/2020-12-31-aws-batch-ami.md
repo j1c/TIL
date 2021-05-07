@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Creating AMI for AWS Batch
-subtitle : Commands I use (almost) everyday
 tags: [AWS, batch, TIL]
 author: Jaewon Chung
 comments : True
