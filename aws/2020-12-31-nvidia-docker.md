@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Setting nvidia as default runtime 
-tags: [AWS, EC2, TIL]
+title: Setting nvidia as default runtime
+tags: [AWS, EC2, Batch, TIL]
 author: Jaewon Chung
 comments : True
 ---
@@ -39,10 +39,12 @@ Confirm that the `nvidia` is the default runtime by running:
 docker info | grep -i runtime
 ```
 
-You should see something like 
+You should see something like
 ```
  Runtimes: nvidia runc
  Default Runtime: nvidia
 ```
 
 If you have a fresh machine, you will most likely need to install the NVIDIA Container Runtime. See [here](https://docs.nvidia.com/dgx/nvidia-container-runtime-upgrade/index.html#about-nv-container-runtime) for instructions.
+
+This can be used as a workaround for Batch jobs getting stuck on "Runnable" when you specify GPUs in Job Definitions. You can create an AMI with `nvidia` as your default Docker runtime, and your jobs will have GPUs available without having to specify the number of GPUs in your Job Definition.
